@@ -6,7 +6,7 @@ def menu():
 
 def prize():
     global balance
-    result = random.choices(chests, [0.30, 0.15, 0.15, 0.15, 0.25], k = 1)
+    result = random.choices(chests, [0.30, 0.20, 0.10, 0.05, 0.25], k = 1)
     if result[0] == "green":
         print("Brawo! Znalazłeś zieloną skrzynię, a w niej 1000 golda!")
         balance += 1000
