@@ -1,6 +1,8 @@
 import random
+
 balance = 0
 chests = ["green", "orange", "purple", "gold", "nothing"]
+
 def menu(): 
     return int(input("Aby pójść prosto wciśnij 1, aby pójść w lewo wciśnij 2, a w prawo 3!: "))
 
@@ -28,7 +30,6 @@ def prize():
         print("Aktualnie w sakwie masz:", balance, '\n')
 
 print("Uwaga! Wpadłeś do komnaty pełnej skarbów i masz okazję się wzbogacić!")
-
 
 
 x = 0
