@@ -18,7 +18,10 @@ film = {
     }
 }
 
-encodedFilm = json.dumps(film, ensure_ascii=False)
-
 with open("sample.json", "w", encoding="UTF-8") as file:
-    json.dump(film, file, ensure_ascii=False)
+    encodedFilm = json.dump(film, file, ensure_ascii=False)
+
+with open("sample.json", "r", encoding="UTF-8") as file:
+    decodedFilm = json.load(file)
+
+print(decodedFilm)
