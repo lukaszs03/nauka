@@ -1,18 +1,15 @@
 import requests
-import json 
+import json
+from collections import defaultdict
 
 r = requests.get("https://jsonplaceholder.typicode.com/todos")
 a = requests.get("https://jsonplaceholder.typicode.com/users")
 
 def count_task_frequency(tasks): 
-    completedTasksFrequencyByUser = dict()
+    completedTasksFrequencyByUser = defaultdict(int)
     for entry in tasks:
         if(entry["completed"] == True):
-            try:
-                completedTasksFrequencyByUser[entry["userId"]] += 1
-            except KeyError:
-                completedTasksFrequencyByUser[entry["userId"]] = 1
-
+            completedTasksFrequencyByUser[entry["userId"]] += 1
     return completedTasksFrequencyByUser
 
 def users_with_top_completed_tasks(completedTasksFrequencyByUser):
