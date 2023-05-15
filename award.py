@@ -10,6 +10,7 @@ def count_task_frequency(tasks):
     for entry in tasks:
         if(entry["completed"] == True):
             completedTasksFrequencyByUser[entry["userId"]] += 1
+
     return completedTasksFrequencyByUser
 
 def users_with_top_completed_tasks(completedTasksFrequencyByUser):
